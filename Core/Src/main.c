@@ -95,7 +95,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  // just a comment to test the git commit and push now
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
