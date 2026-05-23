@@ -94,9 +94,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if (HAL_GPIO_ReadPin(MEU_BOTAO_GPIO_Port, MEU_BOTAO_Pin) == GPIO_PIN_RESET) {
+		  HAL_GPIO_WritePin(LED_C13_GPIO_Port, LED_C13_Pin, GPIO_PIN_SET);
+	  } else {
+		  HAL_GPIO_WritePin(LED_C13_GPIO_Port, LED_C13_Pin, GPIO_PIN_RESET);
+	  }
 
-	  HAL_GPIO_TogglePin(LED_C13_GPIO_Port, LED_C13_Pin);
-	  HAL_Delay(500);
 
     /* USER CODE END WHILE */
 
