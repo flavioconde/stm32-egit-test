@@ -96,6 +96,8 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  // just a comment to test the git commit and push now
+	HAL_GPIO_TogglePin(LED_C13_GPIO_Port, LED_C13_Pin);
+	HAL_Delay(250);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
