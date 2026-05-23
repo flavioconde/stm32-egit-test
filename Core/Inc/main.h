@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LED_C13_Pin GPIO_PIN_13
 #define LED_C13_GPIO_Port GPIOC
+#define MEU_BOTAO_Pin GPIO_PIN_0
+#define MEU_BOTAO_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
