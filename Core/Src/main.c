@@ -94,12 +94,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-	  // just a comment to test the git commit and push now
-	HAL_GPIO_TogglePin(LED_C13_GPIO_Port, LED_C13_Pin);
-	HAL_Delay(250); // delay for 250 milliseconds to test the git commit and push again
-    /* USER CODE BEGIN 3 */
+	if (HAL_GPIO_ReadPin(BUTTON_GPIO_Port, BUTTON_Pin) == GPIO_PIN_RESET) {
+		// If the button is pressed, turn on the LED
+		HAL_GPIO_WritePin(LED_C13_GPIO_Port, LED_C13_Pin, GPIO_PIN_SET);
+	}
+	else {
+		// If the button is not pressed, ensure the LED is off
+		HAL_GPIO_WritePin(LED_C13_GPIO_Port, LED_C13_Pin, GPIO_PIN_RESET);
+	}
+	HAL_Delay(10); // Add a small delay to debounce the button
   }
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 
